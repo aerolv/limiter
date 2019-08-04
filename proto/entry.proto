@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.github.aerox.ratelimit;
+
+option go_package = "limiter";
+
+message LimitRule {
+    message Rule {
+        string key = 1;
+        string value = 2;
+    }
+
+    repeated Rule rules = 1 [];
+}
+
+
+
